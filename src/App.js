@@ -8,11 +8,14 @@ function App() {
   const url = 'https://moneytree.extensi.one/api/analytics/getUTManalytics'
   const [data, setData] = useState(null)
   useEffect(() => {
-    axios.get(url).then(res => {
-      setData(transformObjectToArray(res.data.utmMarks))         
-    })
-    
-  }, [])
+    axios.get(url)
+      .then(res => {
+        setData(transformObjectToArray(res.data.utmMarks));         
+      })
+      .catch(err => {
+        console.error('Ошибка при загрузке данных:', err);
+      });
+  }, []);
 
   return (
     <div className="App">
