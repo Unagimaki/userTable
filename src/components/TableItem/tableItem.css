@@ -1,0 +1,24 @@
+.tableItem_container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1vw;
+    border: 1px solid black;
+    padding: .3vw;
+}
+.tableItem_count {
+    min-width: 40%;
+    display: flex;
+    justify-content: space-between;
+}
+.tableItem_tasks {
+    display: flex;
+    flex-direction: column;
+    min-width: 36%;
+
+}
+.tableItem_tasks div {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
